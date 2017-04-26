@@ -1,0 +1,8 @@
+.py[c|o]
+__pycache__
+build/
+dist/
+.python-version
+*.log
+*.sublime*
+*.egg-info

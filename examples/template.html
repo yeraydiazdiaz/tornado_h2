@@ -1,0 +1,20 @@
+<html>
+   <head>
+      <title>PythonTiles</title>
+   </head>
+   <link rel="stylesheet" type="text/css" href="/static/style.css" />
+   <body>
+    <div class="container">
+      <h1>PythonTiles</h1>
+      <p>An example of <a href="https://github.com/yeraydiazdiaz/tornado_h2">tornado_h2</a>, a (very basic) HTTP/2 server for <a href="https://tornadoweb.org" target="_blank">Tornado</a> using <a href="https://python-hyper.org/projects/h2/">Hyper-H2</a>.
+      <p class="tiles">
+      {% for x in range(max_tiles) %}
+        {% for y in range(max_tiles) %}
+            <img src="/tile/{{ (x * max_tiles) + y }}" alt="Tile {{ (x * max_tiles) + y }}" />
+        {% end %}
+        <br />
+      {% end %}
+      </p>
+    </div>
+   </body>
+ </html>
