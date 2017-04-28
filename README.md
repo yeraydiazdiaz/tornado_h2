@@ -2,7 +2,9 @@
 
 An HTTP/2 server integrated with [Tornado](https://tornadoweb.org) using [hyper-h2](https://python-hyper.org/h2/en/stable/).
 
-This in no way fully compliant and is missing many features (and tests), the intention was to have a server that plugs into the Tornado web framework allowing `RequestHandler`s to return content correctly.
+Check out [PythonTiles](http://bit.ly/2qed5YY), a quick example inspired by [GopherTiles](https://http2.golang.org/gophertiles)
+
+**Please note**: This in no way fully compliant, is missing many features (and tests) and it's very likely there are better ways to implement it, the intention was to have a server that plugs into the Tornado web framework allowing `RequestHandler`s to return content correctly.
 
 ## Setup and run
 
