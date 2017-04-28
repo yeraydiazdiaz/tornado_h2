@@ -72,6 +72,9 @@ class TileHandler(tornado.web.RequestHandler):
 
     """
 
+    def compute_etag(self):
+        return None
+
     def get_tile(self, tile_number):
         """Returns a crop of `img` based on a sequence number `tile_number`.
 
