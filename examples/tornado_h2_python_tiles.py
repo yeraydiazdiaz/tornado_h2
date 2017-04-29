@@ -168,9 +168,9 @@ class PythonTilesApplication(tornado.web.Application):
 
 if __name__ == '__main__':
     base_path = os.path.dirname(__file__)
-    path_to_image = os.path.join(base_path, 'static', 'burmese_python.jpg')
-    img = Image.open(path_to_image)
     options.parse_command_line()
+    path_to_image = os.path.join(base_path, 'static', options.image_name)
+    img = Image.open(path_to_image)
     log.setup_logging()
 
     ssl_paths = [

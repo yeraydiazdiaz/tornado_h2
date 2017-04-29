@@ -4,8 +4,6 @@ Extensions to the web.py module for use in HTTP2
 """
 import logging
 
-from tornado import gen, httputil
-
 from tornado.web import StaticFileHandler
 
 log = logging.getLogger(__name__)
@@ -19,11 +17,11 @@ class HTTP2StaticFileHandler(StaticFileHandler):
 
     """
 
-    def compute_etag(self):
-        """Skip eTag.
+    def should_return_304(self):
+        """Skip cache.
 
         """
-        return None
+        return False
 
     @classmethod
     def get_content(cls, abspath, start=None, end=None, chunk_size=16 * 1024):
